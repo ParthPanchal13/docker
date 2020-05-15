@@ -1,10 +1,48 @@
 {% extends 'index.html'%}
 
 {% block content %}
-	<h1>Create New Account</h1>
-	<form method="POST">
+	
+	<center>
+		
+		<h1>Create New Account</h1>
+		<form method="POST">
 		 {% csrf_token %}
-		{{form.as_p}}
-		<button>Register</button>
-	</form>
+			<table>
+				<tr>
+					<td>
+						{{form.username.label}}<br>
+						{{form.username}}<br>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<br>{{form.password1.label}}<br>
+						{{form.password1}}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<br>{{form.password2.label}}<br>
+						{{form.password2}}
+					</td>
+
+				</tr>
+			</table>
+
+		<br><button>Register</button>
+		</form>
+	</center>
 {% endblock %}
+
+
+
+
+
+
+
+		{{form.password1.label}}
+		{{form.password1}}
+
+		{{form.password2.label}}
+		{{form.password2}}
