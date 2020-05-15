@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
 	<title>Authentication System</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
-<body>
+<body style="background-image: url('{% static 'img1.jpg' %}') ;background-repeat: no-repeat;">
 	{% block content %}
 		<h1>Welcome Home , from Homepage </h1>
 		{% if user.is_authenticated %}

@@ -8,8 +8,37 @@
 		<h1>System Login</h1>
 		<form method="POST">
 		 {% csrf_token %}
-		{{form.as_p}}
-		<button>Login</button>
+			<table>
+				<tr>
+					<td>
+						{{form.username.label}}<br>
+						{{form.username}}<br>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						<br>{{form.password.label}}<br>
+						{{form.password}}
+					</td>
+				</tr>
+				<tr>
+					<td><button>Login</button></td>
+					
+				</tr>
+			</table>
+		
 		</form>
 	</center>
+
 {% endblock %}
+
+
+
+
+
+
+
+
+
+{{form.as_p}}
